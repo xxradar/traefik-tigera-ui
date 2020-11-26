@@ -1,0 +1,23 @@
+tcp:
+  routers:
+    Router-1:
+      # won't listen to entry point web
+      entryPoints:
+      - "other"
+      rule: "HostSNI(`sni.radarhack.com`)"
+      service: "sni-test-svc"
+      # will route TLS requests (and ignore non tls requests)
+      tls:
+        passthrough: "true"   
+
+  # Add the service
+  services:
+    sni-test-svc:
+      loadBalancer:
+        servers:
+        - address: "198.199.124.250:443"
+        - address: "95.85.54.44:443"
+
+
+
+
