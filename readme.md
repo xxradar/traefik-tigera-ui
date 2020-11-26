@@ -11,7 +11,7 @@ docker run -d -p 8080:8080 -p 8000:80 -p 8443:443 -p 9090:9090 \
         --name traefik traefik:v2.3 
 ```
 
-###  Setting up nginx (docker provide demo)
+###  Setting up nginx (docker provider demo)
 Create a file ./mylabel.txt
 ```
 traefik.http.routers.whoami.rule=Host(`test.docker.localhost`)
