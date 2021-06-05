@@ -115,10 +115,8 @@ api:
 ################################################################
 
 providers:
-  docker:
-    endpoint: "unix:///var/run/docker.sock"
   file:
     directory: /conf
-  kubernetesIngress:
-    endpoint: "http://192.168.123.51:9080"
 
+serversTransport:
+  insecureSkipVerify: true

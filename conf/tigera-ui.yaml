@@ -1,0 +1,23 @@
+http:
+  # Add the router
+  routers:
+    radarhack-router:
+      entryPoints:
+      - websecure
+      service: radarhack-svc
+      rule:  Host(`test3.radarhack.com`) && PathPrefix(`/`)
+      tls: {}
+
+  # Add the service
+  services:
+    radarhack-svc:
+      loadBalancer:
+        servers:
+        - url: https://192.168.0.131:9443
+
+tls:
+  certificates:
+  - certFile: /certspath/tls.crt
+    keyFile: /certspath/tls.key
+  - certFile: /certspath/tls3.crt
+    keyFile: /certspath/tls3.key
