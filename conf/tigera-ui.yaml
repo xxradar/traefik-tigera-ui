@@ -19,5 +19,3 @@ tls:
   certificates:
   - certFile: /certspath/tls.crt
     keyFile: /certspath/tls.key
-  - certFile: /certspath/tls3.crt
-    keyFile: /certspath/tls3.key
