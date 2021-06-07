@@ -10,7 +10,8 @@ openssl req -x509 -newkey rsa:2048 -keyout ./certs/tls.key -out ./certs/tls.crt 
 ### Adjust the traefik file provider details
 1. Change the hostname for the Tigera UI in `./conf/tigera-ui.yaml`
 2. Make sure the file specifies the correct certificates in `./conf/tigera-ui.yaml`
-3. Make sure  `- url: https://10.101.71.188:30771` is the `Node:NodePort` of the kubernetes service.
+3. Make sure  `- url: https://10.101.71.188:30771` is the `Node:NodePort` of the kubernetes service. <br>
+   Also verify that this NodePort is reachable from the traefik node.
 
 
 ### Starting traefik
