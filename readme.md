@@ -3,6 +3,7 @@
 ### Create a certificate
 Change the hostame and make sure it resolves to the Traefik instances. The name should be the hostname the Tigere-UI will be accessblie on.
 ```
+mkdir certs
 openssl req -x509 -newkey rsa:2048 -keyout ./certs/tls.key -out ./certs/tls.crt -days 365 -nodes -subj "/CN=test3.radarhack.com"
 ```
 
