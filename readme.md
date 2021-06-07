@@ -1,5 +1,4 @@
-## Installing Traefik on docker (provider docker, file and ingress)
-
+## Installing Traefik on docker to expose Tigera-UI
 
 ### Create a certificate
 Change the hostame and make sure it resolves to the Traefik instances. The name should be the hostname the Tigere-UI will be accessblie on.
