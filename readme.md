@@ -1,4 +1,4 @@
-## Installing Traefik on docker to expose Tigera-UI
+## Installing Traefik on docker node to expose Tigera-UI
 
 ### Create a certificate
 Change the hostame and make sure it resolves to the Traefik instances. The name should be the hostname the Tigere-UI will be accessblie on.
